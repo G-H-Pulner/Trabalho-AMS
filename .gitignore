@@ -1,0 +1,7 @@
+.vscode
+test.*
+*.pyc
+.venv
+.env
+venv
+.python-version
