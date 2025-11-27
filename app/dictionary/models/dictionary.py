@@ -12,4 +12,6 @@ class Dictionary(Base):
     classe_gramatical = Column(String)
     exemplo_libras = Column(String)
     origem = Column(String)
-    
+    mao = Column(String)
+    imagem = Column(String)
+    video = Column(String)

@@ -35,6 +35,9 @@ def update_dictionary(dictionary_id: int, dictionary_data: DictionaryCreate):
         db_dictionary.classe_gramatical = dictionary_data.classe_gramatical
         db_dictionary.exemplo_libras = dictionary_data.exemplo_libras
         db_dictionary.origem = dictionary_data.origem
+        db_dictionary.mao = dictionary_data.mao
+        db_dictionary.imagem = dictionary_data.imagem
+        db_dictionary.video = dictionary_data.video
         
         db.commit()
         db.refresh(db_dictionary)

@@ -1,23 +1,22 @@
 from pydantic import BaseModel
 
-# Classe Base com os dados comuns
 class DictionaryBase(BaseModel):
-    assunto: str
+    assunto: str | None = None
     palavra: str
-    acepcao: str
-    exemplo: str
-    classe_gramatical: str
-    exemplo_libras: str
-    origem: str
+    acepcao: str | None = None
+    exemplo: str | None = None
+    classe_gramatical: str | None = None
+    exemplo_libras: str | None = None
+    origem: str | None = None
+    mao: str
+    imagem: str | None = None
+    video: str | None = None
 
-# Schema para validação na CRIAÇÃO (POST)
 class DictionaryCreate(DictionaryBase):
     pass
 
-# Schema para RETORNO dos dados (GET)
 class Dictionary(DictionaryBase):
     id: int
 
     class Config:
-        # Permite que o Pydantic leia dados direto do objeto do banco (SQLAlchemy)
         from_attributes = True
